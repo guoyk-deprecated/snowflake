@@ -52,13 +52,12 @@ func (sf *snowflake) Stop() {
 }
 
 func (sf *snowflake) run() {
-	var lastT uint64
-	var seqID uint64
+	var nowT, lastT, seqID uint64
 	for {
 		select {
 		case <-sf.chReq:
 		retry:
-			nowT := uint64(time.Since(sf.startTime) / time.Millisecond)
+			nowT = uint64(time.Since(sf.startTime) / time.Millisecond)
 			if nowT == lastT {
 				seqID = seqID + 1
 				if seqID > uint12Mask {
