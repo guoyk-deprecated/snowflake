@@ -1,6 +1,7 @@
 # snowflake
 
 [![BMC Donate](https://img.shields.io/badge/BMC-Donate-orange)](https://www.buymeacoffee.com/vFa5wfRq6)
+[![Build Status](https://travis-ci.org/guoyk93/snowflake.svg?branch=master)](https://travis-ci.org/guoyk93/snowflake)
 
 A concurrent-safe lock-free implementation of snowflake algorithm in Golang
 
